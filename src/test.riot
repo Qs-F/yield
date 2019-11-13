@@ -1,13 +1,11 @@
 <test-riot>
   <p>test from riot</p>
   <script>
-    import { DiffDOM } from 'diff-dom'
-
     export default {
       onBeforeMount() {
-        console.log(this.template, this.root)
-        let dd = new DiffDOM()
-        console.log(dd.diff(this.root, this.template.dom))
+        let t = document.createElement('template')
+        let fr = document.createDocumentFragment()
+        Array.from(this.root.children).map(v => fr.appendChild(v))
       }
     }
   </script>
