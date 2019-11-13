@@ -1,0 +1,14 @@
+<test-riot>
+  <p>test from riot</p>
+  <script>
+    import { DiffDOM } from 'diff-dom'
+
+    export default {
+      onBeforeMount() {
+        console.log(this.template, this.root)
+        let dd = new DiffDOM()
+        console.log(dd.diff(this.root, this.template.dom))
+      }
+    }
+  </script>
+</test-riot>
