@@ -1,6 +1,6 @@
 {
     "name": "@creatorqsf/yield",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/yield.ts",
     "types": "dist/yield.d.ts",
     "repository": "git@github.com:Qs-F/yield.git",
