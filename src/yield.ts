@@ -1,17 +1,30 @@
-export default (component) => {
+import { RiotComponent } from 'riot'
+
+export default (component: RiotComponent): void => {
   const f = component.onBeforeMount
   const g = component.onMounted
 
-  component.onBeforeMount = (e) => { 
-    f.bind(component)(e)
+  component.onBeforeMount = (p, s) => {
+    if (f) {
+      f.bind(component)(p, s)
+    }
     component.fr = document.createDocumentFragment()
     Array.from(component.root.children).map(v => component.fr.appendChild(v))
   }
 
-  component.onMounted = (e) => {
-    g.bind(component)(e)
+  component.onMounted = (p, s) => {
+    if (g) {
+      g.bind(component)(p, s)
+    }
     const target = component.root.querySelector('yield')
-    target.parentElement.insertBefore(component.fr, target)
-    target.parentElement.removeChild(target)
+    if (target === null) {
+      return
+    }
+    const tp = target.parentElement
+    if (tp === null) {
+      return
+    }
+    tp.insertBefore(component.fr, target)
+    tp.removeChild(target)
   }
 }
