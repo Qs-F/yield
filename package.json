@@ -10,7 +10,8 @@
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "diff-dom": "^4.1.6",
     "parcel-bundler": "^1.12.4",
-    "riot": "^4.6.6"
+    "riot": "^4.6.6",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "build": "parcel build src/index.html",
