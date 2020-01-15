@@ -19,7 +19,7 @@ For yarn user,
 In your bundle file (like `app.js`) which register riot component or mount them, add some following lines.
 
 ```js
-import yf from 'yield'
+import yf from '@creatorqsf/yield'
 
 riot.install(yf)
 ```
