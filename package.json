@@ -1,32 +1,35 @@
 {
-    "name": "@creatorqsf/yield",
-    "version": "1.0.1",
-    "main": "dist/yield.ts",
-    "types": "dist/yield.d.ts",
-    "repository": "git@github.com:Qs-F/yield.git",
-    "author": "Qs-F <qsf@de-liker.com>",
-    "license": "MIT",
-    "dependencies": {
-        "@riotjs/compiler": "^4.5.2",
-        "@riotjs/parcel-plugin-riot": "^4.0.1",
-        "parcel-bundler": "^1.12.4",
-        "riot": "^4.6.6",
-        "typescript": "^3.7.4"
-    },
-    "scripts": {
-        "build": "tsc",
-        "prepublishOnly": "npm run build"
-    },
-    "devDependencies": {
-        "typescript": "^3.7.4"
-    },
-    "keywords": [
-        "riot",
-        "riot.js",
-        "riotjs",
-        "yield",
-        "slot",
-        "riot v3",
-        "riot v4"
-    ]
+  "name": "@creatorqsf/yield",
+  "version": "1.0.2",
+  "main": "dist/yield.ts",
+  "types": "dist/yield.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "git@github.com:Qs-F/yield.git",
+  "author": "Qs-F <qsf@de-liker.com>",
+  "license": "MIT",
+  "dependencies": {
+    "riot": "^4.6.6",
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@riotjs/compiler": "^4.5.2",
+    "@riotjs/parcel-plugin-riot": "^4.0.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.4"
+  },
+  "keywords": [
+    "riot",
+    "riot.js",
+    "riotjs",
+    "yield",
+    "slot",
+    "riot v3",
+    "riot v4"
+  ]
 }
