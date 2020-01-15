@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "main": "dist/yield.ts",
   "types": "dist/yield.d.ts",
-  "file": [
+  "files": [
     "dist"
   ],
   "repository": "git@github.com:Qs-F/yield.git",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@riotjs/compiler": "^4.5.2",
